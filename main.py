@@ -42,9 +42,4 @@ while game_on:
             score_text.lost_text()
             game_on = False
 
-
-
-
-
-
 screen.exitonclick()
