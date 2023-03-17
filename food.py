@@ -13,6 +13,6 @@ class Food(Turtle):
         self.go_to_new_location()
 
     def go_to_new_location(self):
-        random_x = random.randint(-270, 270)
-        random_y = random.randint(-270, 270)
+        random_x = random.randint(-260, 260)
+        random_y = random.randint(-260, 260)
         self.goto(random_x, random_y)
