@@ -31,15 +31,15 @@ while game_on:
         food.go_to_new_location()
 
     # Detect collision with Wall
-    if snake.head.xcor() == -280 or snake.head.xcor() == 280 or snake.head.ycor() == 280 or snake.head.ycor() == -280:
-        score_text.lost_text()
-        game_on = False
+    if snake.head.xcor() <-280 or snake.head.xcor() > 280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
+        snake.reset()
+        score_text.reset()
 
     # Detect collision with the body
     # If the head of the snake collides with any snake segment, then game is over
     for segment in snake.segments[1:]:
         if snake.head.distance(segment) < 10:
-            score_text.lost_text()
-            game_on = False
+            snake.reset()
+            score_text.reset()
 
 screen.exitonclick()
